@@ -18,9 +18,10 @@ class App {
       .build();
 
     // receives the "colorChanged" web socket event
-    connection.on("colorChanged", hex => {https://nodejs.org/en/
+    connection.on("colorChanged", (hex) => {
+      //nodejs.org/en/
       // update the bulb color
-      bulb.style = `fill: #${currentColor};`;
+      https: bulb.style = `fill: #${currentColor};`;
       currentColor.textContent = `#${currentColor}`;
     });
 
@@ -44,7 +45,7 @@ class App {
    */
   async setColor(color) {
     await fetch(
-      `${API_BASE}/setColor?color=${color.substring(1, color.length)}`
+      `${API_BASE}/setColor?color=${color.substring(1, color.length)}`,
     );
   }
 
