@@ -15,6 +15,25 @@
 			"**/{solution,start}/**": true,
 			"**/*.code-workspace": true
 		},
-		"liveServer.settings.multiRootWorkspaceName": "start"
+		"liveServer.settings.multiRootWorkspaceName": "exercise-2-productivity-tricks",
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#8823c5",
+			"activityBar.activeBorder": "#bd8322",
+			"activityBar.background": "#8823c5",
+			"activityBar.foreground": "#e7e7e7",
+			"activityBar.inactiveForeground": "#e7e7e799",
+			"activityBarBadge.background": "#bd8322",
+			"activityBarBadge.foreground": "#15202b",
+			"statusBar.background": "#6a1b9a",
+			"statusBar.border": "#6a1b9a",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#8823c5",
+			"titleBar.activeBackground": "#6a1b9a",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.border": "#6a1b9a",
+			"titleBar.inactiveBackground": "#6a1b9a99",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"peacock.color": "6A1B9A"
 	}
 }
