@@ -3,12 +3,12 @@ const API_BASE = "https://lifx-lamp-api.azurewebsites.net/api";
 // define variables
 let app = document.getElementById("app");
 let goButton = document.getElementById("goButton");
-let colorInput = document.getElementById("colorInput");
+let lampInput = document.getElementById("colorInput");
 let currentColor = document.getElementById("currentColor");
 let bulb = document.getElementById("bulb");
 let online = window.navigator.onLine;
 
-class App {
+class Application {
   /**
    * Initalize the page and websocket connection
    */
@@ -17,7 +17,7 @@ class App {
     const online = window.navigator.onLine;
 
     goButton.addEventListener("click", async () => {
-      const color = colorInput.value;
+      const color = lampInput.value;
       this.setColor(color);
     });
 
@@ -28,6 +28,7 @@ class App {
     }
   }
 
+  // #region class Methods
   async init() {
     // initialize signalR hub (websockets connection)
     let connection = new signalR.HubConnectionBuilder()
@@ -37,12 +38,16 @@ class App {
     // receives the "colorChanged" web socket event
     connection.on("colorChanged", (hex) => {
       // update the bulb color
-      bulb.style = `fill: #${hex};`;
-      currentColor.textContent = `#${hex}`;
+      this.updateColor(hex);
     });
 
     // start the websocket connection
     await connection.start();
+  }
+
+  updateColor(hex) {
+    bulb.style = `fill: #${hex};`;
+    currentColor.textContent = `#${hex}`;
   }
 
   /**
@@ -61,6 +66,7 @@ class App {
       currentColor.textContent = `#${hexNoHash}`;
     }
   }
+  // #endregion
 }
 
-let application = new App();
+export default Application;
