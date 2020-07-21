@@ -35,7 +35,7 @@ class App {
       .build();
 
     // receives the "colorChanged" web socket event
-    connection.on("colorChanged", hex => {
+    connection.on("colorChanged", (hex) => {
       // update the bulb color
       bulb.style = `fill: #${hex};`;
       currentColor.textContent = `#${hex}`;
@@ -53,6 +53,7 @@ class App {
     const hexNoHash = color.substring(1, color.length);
     // if we're online, update the lamp
     if (online) {
+      fetch(`${API_BASE}/setColor?color=${hexNoHash}`);
       await fetch(`${API_BASE}/setColor?color=${hexNoHash}`);
     } else {
       // if we're offline, update the color
