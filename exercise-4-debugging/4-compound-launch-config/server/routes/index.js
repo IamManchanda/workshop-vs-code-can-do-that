@@ -6,6 +6,7 @@ const API_BASE = process.env.API_BASE;
 
 router.get("/setColor", async (req, res, next) => {
   const color = req.query.color;
+  console.log(`The color is ${color}`);
 
   // call the API to set the lamp color
   try {

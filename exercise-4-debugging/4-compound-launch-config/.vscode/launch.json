@@ -1,0 +1,49 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "compounds": [{
+    "name": "Launch the compound fullstack app",
+    "configurations": [
+      "[Nodemon] Launch Server App",
+      "[Chrome] Launch Web App"
+    ]
+  }],
+  "configurations": [{
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "name": "[Nodemon] Launch Server App",
+      "program": "${workspaceFolder}/server/server.js",
+      "request": "launch",
+      "restart": true,
+      "runtimeExecutable": "nodemon",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node",
+      "env": {
+        "API_BASE": "https://lifx-lamp-api.azurewebsites.net/api"
+      }
+    },
+    {
+      "name": "[Node] Launch Server App",
+      "program": "${workspaceFolder}/server/server.js",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node",
+      "env": {
+        "API_BASE": "https://lifx-lamp-api.azurewebsites.net/api"
+      }
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "[Chrome] Launch Web App",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/src"
+    }
+  ]
+}

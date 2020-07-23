@@ -39,6 +39,6 @@
     },
     "debug.node.autoAttach": "on",
     "liveServer.settings.multiRootWorkspaceName": "3-debug-browser-apps",
-    "peacock.color": "#639"
+    "peacock.color": "#639",
   }
 }
