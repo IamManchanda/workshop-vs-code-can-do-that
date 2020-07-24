@@ -16,7 +16,25 @@
 			"**/{solution,start}/**": true,
 			"**/*.code-workspace": true
 		},
-		"workbench.colorCustomizations": {},
-		"debug.internalConsoleOptions": "neverOpen"
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#232fa8",
+			"activityBar.activeBorder": "#000000",
+			"activityBar.background": "#232fa8",
+			"activityBar.foreground": "#e7e7e7",
+			"activityBar.inactiveForeground": "#e7e7e799",
+			"activityBarBadge.background": "#000000",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"statusBar.background": "#1a237e",
+			"statusBar.border": "#1a237e",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#232fa8",
+			"titleBar.activeBackground": "#1a237e",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.border": "#1a237e",
+			"titleBar.inactiveBackground": "#1a237e99",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"debug.internalConsoleOptions": "neverOpen",
+		"peacock.color": "1A237E"
 	}
 }
