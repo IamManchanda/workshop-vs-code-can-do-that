@@ -1,0 +1,2 @@
+-- SQL
+SELECT * FROM Colors;
